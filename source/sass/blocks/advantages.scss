@@ -1,0 +1,122 @@
+.advantages {
+  width: 100%;
+  background-color: $color-solitude;
+}
+
+.advantages__container {
+  position: relative;
+  max-width: 100%;
+  height: 100%;
+  padding: 0;
+
+  @include vp-1023 {
+    padding: 0;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.advantages__image-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.advantages__content {
+  position: relative;
+  max-width: 1366px;
+  margin: auto;
+  padding: 120px 103px;
+
+  @include vp-1023 {
+    padding: 100px 45px;
+  }
+
+  @include vp-767 {
+    padding: 65px 15px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 600;
+    color: $color-tangaroa;
+    margin: 0 0 60px;
+    text-align: center;
+
+    @include vp-1023 {
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1023 {
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.advantages__item {
+  margin: 0;
+  padding: 30px 30px 50px;
+  background-color: $color-alice-blue;
+
+  @include vp-1023 {
+    padding: 25px 20px 25px;
+  }
+
+  svg {
+    @include vp-1023 {
+      width: 22px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 500;
+    color: $color-tangaroa;
+    margin: 25px 0 20px;
+
+    @include vp-1023 {
+      line-height: 25px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $color-tangaroa;
+    margin: 0;
+
+    @include vp-767 {
+      margin-bottom: 42px;
+    }
+  }
+}
