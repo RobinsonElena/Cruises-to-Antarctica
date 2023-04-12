@@ -4,16 +4,16 @@
 
 .catalog__container {
   margin: 0 auto;
-  padding-top: 95px;
+  padding-top: 84px;
   padding-bottom: 120px;
 
   @include vp-1023 {
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 100px;
   }
 
   @include vp-767 {
-    padding-top: 65px;
+    padding-top: 58px;
     padding-bottom: 65px;
   }
 
@@ -22,7 +22,7 @@
     line-height: 42px;
     font-weight: 600;
     color: $color-tangaroa;
-    margin: 0 0 60px;
+    margin: 0 0 49px;
     text-align: center;
 
     @include vp-1023 {
@@ -33,6 +33,7 @@
     @include vp-767 {
       font-size: 24px;
       line-height: 34px;
+      margin: 0 0 31px;
     }
   }
 }
@@ -41,17 +42,21 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 2.5%;
-  row-gap: 30px;
+  row-gap: 28px;
   margin: 0;
   padding: 0 15px;
   list-style: none;
 
   @include vp-1023 {
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 4.5%;
+    row-gap: 29px;
   }
 
   @include vp-767 {
     grid-template-columns: 1fr;
+    row-gap: 30px;
+    padding: 0 10px;
   }
 }
 
@@ -62,16 +67,12 @@
   padding: 0;
   aspect-ratio: 260/386;
 
-  h3 {
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: 500;
-    color: $color-alice-blue;
-    margin: 0;
+  @include vp-1023 {
+    aspect-ratio: 309/386;
+  }
 
-    @include vp-1023 {
-      line-height: 25px;
-    }
+  @include vp-767 {
+    aspect-ratio: 270/386;
   }
 
   @include hover {
@@ -80,12 +81,16 @@
     }
 
     .catalog__item-wrapper {
-      //min-height: 386px;
       height: 100%;
       background-color: $color-tangaroa;
 
       h3 {
-        margin: 0 0 20px;
+        margin: 0 0 5px;
+        transform: translateX(0);
+
+        @include vp-1023 {
+          margin: 0 0 10px;
+        }
       }
     }
 
@@ -124,8 +129,29 @@
   display: grid;
   grid-area: 1 / 1 / 2 / 2;
   align-self: end;
-  padding: 35px 25px;
+  padding: 30px 25px 23px;
   overflow: hidden;
+
+  @include vp-1023 {
+    padding: 30px 35px 28px;
+  }
+
+  @include vp-767 {
+    padding: 30px 25px 18px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 500;
+    margin: 0;
+    color: $color-alice-blue;
+    transform: translate(6px, 0);
+
+    @include vp-1023 {
+      transform: translate(0, 0);
+    }
+  }
 }
 
 .catalog__description {
@@ -152,21 +178,30 @@
   dd {
     font-weight: 400;
     color: $color-quartz;
-    margin: 0 0 10px;
+    margin: 0 0 12px;
   }
 }
 
 .catalog__button {
   display: none;
   width: 100%;
+  height: 40px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
   color: $color-tangaroa;
-  //margin-top: 30px;
-  padding: 15px 0;
+  margin-bottom: 13px;
+  padding: 10px 0 15px;
   background-color: $color-alice-blue;
   text-align: center;
   align-self: self-end;
   user-select: none;
+
+  @include vp-1023 {
+    margin-bottom: 8px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 16px;
+  }
 }
