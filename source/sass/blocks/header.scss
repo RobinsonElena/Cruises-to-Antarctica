@@ -16,7 +16,15 @@
 }
 
 .header__container {
+  padding: 0 103px;
+
+  @include vp-1023 {
+    padding: 0 45px;
+  }
+
   @include vp-767 {
+    padding: 0 15px;
+
     .is-open & {
       z-index: 1;
       position: absolute;

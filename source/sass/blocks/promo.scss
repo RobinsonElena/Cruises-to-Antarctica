@@ -2,21 +2,18 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(324px, 560px));
   column-gap: 40px;
-  padding-top: 112px;
-  padding-bottom: 145px;
+  padding: 112px 103px 145px;
 
   @include vp-1023 {
     column-gap: 30px;
-    padding-top: 91px;
-    padding-bottom: 93px;
+    padding: 91px 45px 93px;
   }
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
     column-gap: 0;
-    padding-top: 57px;
-    padding-bottom: 85px;
+    padding: 57px 15px 85px;
   }
 }
 
