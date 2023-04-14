@@ -1,13 +1,14 @@
 .btn {
-  display: inline-flex;
+  display: block;
   padding: 10px 20px;
 
   color: $color-tangaroa;
 
   background-color: $color-alice-blue;
   border: none;
+  border-radius: 0;
   cursor: pointer;
-
+  user-select: none;
   transition: opacity $trans-default;
 
   &--red {

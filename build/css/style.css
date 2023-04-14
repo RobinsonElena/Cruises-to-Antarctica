@@ -643,14 +643,17 @@ button,
 }
 
 .btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
   padding: 10px 20px;
   color: #011c40;
   background-color: #f9fbfd;
   border: none;
+  border-radius: 0;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -1762,6 +1765,7 @@ button,
 }
 
 .booking__description p {
+  max-width: 75%;
   font-size: 18px;
   line-height: 27px;
   font-weight: 400;
@@ -1781,6 +1785,8 @@ button,
   background-color: #011c40;
   -ms-grid-column-align: end;
   justify-self: end;
+  -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
 }
 
 .form p {
@@ -1874,9 +1880,15 @@ button,
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
+  margin-top: 33px;
   padding: 11px;
   text-align: center;
   background-color: #f9fbfd;
+}
+
+.form__button.focus-visible:focus {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
 }
 
 .form__checkbox {
@@ -1904,7 +1916,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 33px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1932,6 +1943,90 @@ button,
   font-weight: 400;
   color: #f9fbfd;
   margin-left: 23px;
+}
+
+.contacts {
+  width: 100%;
+  background-color: #f9fbfd;
+}
+
+.contacts__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 38px;
+  -moz-column-gap: 38px;
+  column-gap: 38px;
+  height: 100%;
+  padding: 120px 103px;
+}
+
+.contacts__image-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 306px;
+}
+
+.contacts__image-wrapper iframe {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.contacts__image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.contacts__description {
+  max-width: 500px;
+  padding-top: 75px;
+  -ms-grid-column-align: end;
+  justify-self: end;
+}
+
+.contacts__description p {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #011c40;
+  margin: 0 0 30px;
+}
+
+.contacts__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0 0 24px;
+}
+
+.contacts__wrapper svg {
+  margin: 0 10px 0 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.contacts__wrapper address {
+  font-style: normal;
+}
+
+.contacts__wrapper a.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.contacts__wrapper a.focus-visible:focus {
+  outline: 1px solid #000000;
+  outline-offset: 2px;
 }
 
 /* @mixin hover-focus {
@@ -2132,6 +2227,7 @@ button,
   }
 
   .booking__description p {
+    max-width: initial;
     margin: 0 0 52px;
     text-align: center;
   }
@@ -2149,8 +2245,23 @@ button,
     top: -19px;
   }
 
-  .form__checkbox label {
-    margin-bottom: 33px;
+  .contacts__container {
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    padding: 90px 45px 100px;
+  }
+
+  .contacts__image-wrapper {
+    min-height: 335px;
+  }
+
+  .contacts__description {
+    padding-top: 76px;
+  }
+
+  .contacts__wrapper {
+    margin: 0 0 20px;
   }
 }
 
@@ -2398,6 +2509,7 @@ button,
   }
 
   .booking__description p {
+    max-width: 98%;
     font-size: 16px;
     line-height: 22px;
     margin: 0 0 34px;
@@ -2414,14 +2526,14 @@ button,
     text-align: center;
   }
 
+  .form__button {
+    margin-top: 22px;
+  }
+
   .form__checkbox {
     -webkit-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
     transform: translateY(-5px);
-  }
-
-  .form__checkbox label {
-    margin-bottom: 22px;
   }
 
   .form__mark {
@@ -2431,6 +2543,27 @@ button,
 
   .form__label {
     margin-left: 28px;
+  }
+
+  .contacts__container {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+    padding: 58px 15px 64px;
+  }
+
+  .contacts__image-wrapper {
+    min-height: 316px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .contacts__description {
+    margin-bottom: 13px;
+    padding-top: 0;
   }
 }
 
@@ -2531,5 +2664,9 @@ button,
   .form__input input:not([type=checkbox]):hover:not(.focus-visible).focus-visible:focus {
     outline: 1px solid #ffffff;
     outline-offset: 2px;
+  }
+
+  .contacts__wrapper a:hover:not(.focus-visible) {
+    opacity: 0.8;
   }
 }
