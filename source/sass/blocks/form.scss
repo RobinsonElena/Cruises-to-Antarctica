@@ -106,10 +106,6 @@
   text-align: center;
   background-color: $color-alice-blue;
 
-  @include vp-1023 {
-    //margin-top: 33px;
-  }
-
   @include vp-767 {
     margin-top: 22px;
   }

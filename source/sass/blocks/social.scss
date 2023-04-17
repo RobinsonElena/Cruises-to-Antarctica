@@ -1,0 +1,46 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 118px;
+  padding: 0;
+  list-style-type: none;
+  margin: 0 0 3px;
+
+  @include vp-1023 {
+    width: 100px;
+    margin: 0 0 6px;
+  }
+
+  @include vp-767 {
+    width: 87px;
+    margin: 0;
+  }
+}
+
+.social__item {
+  position: relative;
+  display: block;
+}
+
+.social__link {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 100%;
+    height: 20px;
+
+    @include vp-1023 {
+      height: 16px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-tangaroa;
+    opacity: 0.8;
+  }
+}
