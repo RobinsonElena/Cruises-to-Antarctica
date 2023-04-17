@@ -72,26 +72,26 @@
         }
       }
     }
+  }
+}
 
-    .input-message {
-      position: absolute;
-      top: -32px;
-      left: 0;
-      font-size: 15px;
-      line-height: 15px;
+.input-message {
+  position: absolute;
+  top: -32px;
+  left: 0;
+  font-size: 15px;
+  line-height: 15px;
 
-      &.is-invalid {
-        color: $color-torch-red;
-      }
+  &.is-invalid {
+    color: $color-torch-red;
+  }
 
-      &.is-valid {
-        color: $color-neon-blue;
-      }
+  &.is-valid {
+    color: $color-neon-blue;
+  }
 
-      @include vp-1023 {
-        top: -19px;
-      }
-    }
+  @include vp-1023 {
+    top: -19px;
   }
 }
 

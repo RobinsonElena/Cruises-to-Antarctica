@@ -1477,9 +1477,9 @@ button,
   background-color: #011c40;
 }
 
-.catalog__item:hover .catalog__item-wrapper h3,
-.catalog__item:focus .catalog__item-wrapper h3,
-.catalog__item:focus-within .catalog__item-wrapper h3 {
+.catalog__item:hover h3,
+.catalog__item:focus h3,
+.catalog__item:focus-within h3 {
   margin: 0 0 5px;
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -1746,7 +1746,7 @@ button,
   outline: 2px solid rgba(255, 21, 83, 0.5);
 }
 
-.form__input label .input-message {
+.input-message {
   position: absolute;
   top: -32px;
   left: 0;
@@ -1754,11 +1754,11 @@ button,
   line-height: 15px;
 }
 
-.form__input label .input-message.is-invalid {
+.input-message.is-invalid {
   color: #ff1553;
 }
 
-.form__input label .input-message.is-valid {
+.input-message.is-valid {
   color: #2c39f2;
 }
 
@@ -2191,9 +2191,9 @@ button,
     aspect-ratio: 309/386;
   }
 
-  .catalog__item:hover .catalog__item-wrapper h3,
-  .catalog__item:focus .catalog__item-wrapper h3,
-  .catalog__item:focus-within .catalog__item-wrapper h3 {
+  .catalog__item:hover h3,
+  .catalog__item:focus h3,
+  .catalog__item:focus-within h3 {
     margin: 0 0 10px;
   }
 
@@ -2246,7 +2246,7 @@ button,
     padding-left: 0;
   }
 
-  .form__input label .input-message {
+  .input-message {
     top: -19px;
   }
 
