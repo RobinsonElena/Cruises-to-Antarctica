@@ -18,6 +18,10 @@
 .header__container {
   padding: 0 103px;
 
+  @include vp-1279 {
+    padding: 0 70px;
+  }
+
   @include vp-1023 {
     padding: 0 45px;
   }
@@ -45,22 +49,25 @@
 
   @include vp-767 {
     .is-open & {
-      position: absolute;
+      position: fixed;
       display: block;
-      width: 89vw;
       top: 0;
       bottom: 0;
       right: 0;
+      left: 35px;
       padding-top: 20px;
       padding-left: 15px;
       color: $color-tangaroa;
       background-color: $color-alice-blue;
       z-index: 5;
+      overflow-y: scroll;
     }
   }
 }
 
 .header__logo {
+  margin-right: 25px;
+
   svg {
     width: 70px;
     height: 38px;
@@ -89,7 +96,7 @@
 
 .header__nav-list {
   display: flex;
-  gap: 33px;
+  gap: 2px 33px;
   flex-wrap: wrap;
   align-items: center;
   margin: 0;
@@ -97,7 +104,7 @@
   list-style: none;
 
   @include vp-1023 {
-    gap: 24px;
+    gap: 2px 24px;
   }
 
   @include vp-767 {
@@ -174,6 +181,8 @@
     }
 
     .is-open & {
+      right: 36px;
+
       &::before,
       &::after {
         background-color: $color-tangaroa;

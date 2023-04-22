@@ -28,6 +28,10 @@
   margin: auto;
   padding: 110px 103px 120px;
 
+  @include vp-1279 {
+    padding: 110px 70px 120px;
+  }
+
   @include vp-1023 {
     padding: 90px 45px 100px;
   }

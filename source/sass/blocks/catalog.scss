@@ -6,6 +6,10 @@
   margin: 0 auto;
   padding: 84px 103px 119px;
 
+  @include vp-1279 {
+    padding: 84px 70px 119px;
+  }
+
   @include vp-1023 {
     padding: 90px 45px 100px;
   }
@@ -184,13 +188,12 @@
 .catalog__button {
   display: none;
   width: 100%;
-  height: 40px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
   color: $color-tangaroa;
   margin-bottom: 13px;
-  padding: 10px 0 15px;
+  padding: 10px 0 9px;
   background-color: $color-alice-blue;
   text-align: center;
   align-self: self-end;

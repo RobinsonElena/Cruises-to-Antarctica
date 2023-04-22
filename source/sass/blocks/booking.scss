@@ -31,6 +31,10 @@
   margin: auto;
   padding: 50px 163px 50px;
 
+  @include vp-1279 {
+    padding: 50px 130px 50px;
+  }
+
   @include vp-1023 {
     grid-template-columns: repeat(1, 1fr);
     column-gap: 0;

@@ -4,6 +4,10 @@
   column-gap: 40px;
   padding: 112px 103px 145px;
 
+  @include vp-1279 {
+    padding: 112px 70px 145px;
+  }
+
   @include vp-1023 {
     column-gap: 30px;
     padding: 91px 45px 93px;
@@ -26,7 +30,6 @@
     margin: 56px 0 24px;
 
     @include vp-1023 {
-      max-width: 210px;
       font-size: 26px;
       line-height: 36px;
       margin: 0 0 16px;
